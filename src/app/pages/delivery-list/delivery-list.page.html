@@ -1,14 +1,15 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>your deliveries for today</ion-title>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Deliveries for today</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
-
 <ion-content>
-  <order-card></order-card>
+  <app-order-card *ngFor="let order of orders;"></app-order-card>
   <a
-    href="https://www.waze.com/he/live-map/directions?navigate=yes&to=32.04952643540887,34.95699514455479&from={{lat}},{{long}}">Visit
-    לניווט</a>
+    href="https://www.waze.com/he/live-map/directions?navigate=yes&to=32.04952643540887,34.95699514455479&from={{lat}},{{long}}">
+    navigate</a>
 </ion-content>

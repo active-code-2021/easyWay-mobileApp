@@ -17,6 +17,7 @@ import { OrderCardComponent } from 'src/app/components/order-card/order-card.com
     DeliveryListPageRoutingModule,
 
   ],
-  declarations: [DeliveryListPage, OrderCardComponent]
+  declarations: [DeliveryListPage,
+    OrderCardComponent]
 })
 export class DeliveryListPageModule { }

@@ -8,13 +8,9 @@ import { Order } from 'src/app/classes/order';
 })
 export class OrderCardComponent implements OnInit {
   orderService: OrdersService;
-  orders: Order[];
   constructor() { }
 
   ngOnInit() {
-    this.orderService.getOrders().subscribe(orders => {
-      this.orders = orders;
-    });
 
   }
 

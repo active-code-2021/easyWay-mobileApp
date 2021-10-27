@@ -4,26 +4,18 @@ import { LoginPage } from 'src/app/pages/login/login.page';
 import { OrderCardComponent } from './components/order-card/order-card.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
-  },
-
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'login',
-    // loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
-    component: LoginPage
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
+    // component: LoginPage
   },
-  {
-    path: 'register',
-    loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterPageModule)
-  },
+  { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterPageModule) },
 
   {
-    path: 'delivery-list',
-    loadChildren: () => import('./pages/delivery-list/delivery-list.module').then(m => m.DeliveryListPageModule)
-  }
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
+  }, { path: 'delivery-list', loadChildren: () => import('./pages/delivery-list/delivery-list.module').then(m => m.DeliveryListPageModule) },
 ];
 
 @NgModule({
@@ -31,6 +23,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule],
-  declarations: [OrderCardComponent]
+
 })
 export class AppRoutingModule { }
