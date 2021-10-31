@@ -26,10 +26,7 @@ export class DeliveryListPage implements OnInit {
       this.orders = orders;
     });
 
-
-
   }
-
 
 
 }

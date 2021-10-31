@@ -9,7 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class OrdersService {
   constructor(private http: HttpClient) { }
   getOrders(): Observable<Order[]> {
-    let currentDeliveryMan = "61797191c3641f3910e81870";
-    return this.http.get<Order[]>(`https://localhost:44339/Api/Order/GetOrderByDeliveryMan/` + currentDeliveryMan);
+    let currentDeliveryMan = "61228e4b94dcef1846121056";
+    // https://localhost:44339/Api/Order/GetOrderByDeliveryMan
+    return this.http.get<Order[]>(`https://localhost:44339/api/Order/deliveryMan/` + currentDeliveryMan) as Observable<Order[]>;
   }
 }
