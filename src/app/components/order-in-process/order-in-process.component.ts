@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Customer } from 'src/app/classes/customer';
+import { Order } from 'src/app/classes/order';
 import { OrdersService } from 'src/app/services/orders.service';
 
 @Component({
@@ -7,10 +9,14 @@ import { OrdersService } from 'src/app/services/orders.service';
   styleUrls: ['./order-in-process.component.scss'],
 })
 export class OrderInProcessComponent implements OnInit {
-  @Input() order = {};
+  @Input() order: Order;
   orderService: OrdersService;
-  constructor() { }
 
-  ngOnInit() { }
+  constructor() {
 
+  }
+
+  ngOnInit() {
+
+  }
 }

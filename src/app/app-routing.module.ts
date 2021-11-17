@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'loader',
     loadChildren: () => import('./pages/loader/loader.module').then( m => m.LoaderPageModule)
   },
+  {
+    path: 'execute-order',
+    loadChildren: () => import('./pages/execute-order/execute-order.module').then( m => m.ExecuteOrderPageModule)
+  },
 ];
 
 @NgModule({

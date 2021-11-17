@@ -10,6 +10,7 @@ import { DeliveryListPage } from './delivery-list.page';
 import { OrderCardComponent } from 'src/app/components/order-card/order-card.component';
 import { OrderInProcessComponent } from 'src/app/components/order-in-process/order-in-process.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
