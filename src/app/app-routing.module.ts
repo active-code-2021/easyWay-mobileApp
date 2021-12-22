@@ -18,12 +18,16 @@ const routes: Routes = [
   }, { path: 'delivery-list', loadChildren: () => import('./pages/delivery-list/delivery-list.module').then(m => m.DeliveryListPageModule) },
   {
     path: 'loader',
-    loadChildren: () => import('./pages/loader/loader.module').then( m => m.LoaderPageModule)
+    loadChildren: () => import('./pages/loader/loader.module').then(m => m.LoaderPageModule)
   },
   {
     path: 'execute-order',
-    loadChildren: () => import('./pages/execute-order/execute-order.module').then( m => m.ExecuteOrderPageModule)
+    loadChildren: () => import('./pages/execute-order/execute-order.module').then(m => m.ExecuteOrderPageModule)
   },
+  // {
+  //   path: 'order-in-process',
+  //   loadChildren: () => import('./pages/order-in-process/order-in-process.module').then( m => m.OrderInProcessPageModule)
+  // },
 ];
 
 @NgModule({

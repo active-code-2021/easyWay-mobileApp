@@ -9,7 +9,7 @@ import { DeliveryListPageRoutingModule } from './delivery-list-routing.module';
 import { DeliveryListPage } from './delivery-list.page';
 import { OrderCardComponent } from 'src/app/components/order-card/order-card.component';
 import { OrderInProcessComponent } from 'src/app/components/order-in-process/order-in-process.component';
-
+// import { OrderInProcessComponent } from 'src/app/components/order-in-process/order-in-process.component';
 
 @NgModule({
   imports: [
@@ -21,5 +21,6 @@ import { OrderInProcessComponent } from 'src/app/components/order-in-process/ord
   ],
   declarations: [DeliveryListPage,
     OrderCardComponent, OrderInProcessComponent]
+  // , OrderInProcessComponent
 })
 export class DeliveryListPageModule { }

@@ -9,17 +9,18 @@ import { OrdersService } from 'src/app/services/orders.service';
   styleUrls: ['./execute-order.page.scss'],
 })
 export class ExecuteOrderPage implements OnInit {
+  orderId: string;
+  order: Order;
+  constructor(private orderService: OrdersService, private route: ActivatedRoute) { }
 
-  orders: Order[] = [];
-  constructor(private route: ActivatedRoute, private orderService: OrdersService) { }
-  orderId: number;
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.orderId = params['id'];
+    this.route.queryParams.subscribe(params => {
+      this.orderId = params['orderId'];
+      this.orderService.getOrderById(this.orderId).subscribe(order => {
+        this.order = order;
+      });
     });
 
-    this.orderService.getOrders().subscribe(orders => {
-      this.orders = orders;
-    });
+
   }
 }

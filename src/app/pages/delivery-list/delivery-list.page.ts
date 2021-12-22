@@ -16,8 +16,7 @@ export class DeliveryListPage implements OnInit {
   orders: Order[] = [];
   customer: Customer;
 
-  constructor(private orderService: OrdersService,
-    private customerService: CustomersService) { }
+  constructor(private orderService: OrdersService) { }
 
   ngOnInit() {
     navigator.geolocation.getCurrentPosition((position) => {

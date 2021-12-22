@@ -1,5 +1,5 @@
 {
-  "name": "easyWay-mobileApp",
+  "name": "easyway-mobileapp",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@angular/common": "~12.1.1",
     "@angular/core": "~12.1.1",
+    "@angular/fire": "^7.2.0",
     "@angular/forms": "~12.1.1",
     "@angular/platform-browser": "~12.1.1",
     "@angular/platform-browser-dynamic": "~12.1.1",
@@ -25,6 +26,7 @@
     "@capacitor/keyboard": "1.1.0",
     "@capacitor/status-bar": "1.0.3",
     "@ionic/angular": "^5.5.2",
+    "firebase": "^9.5.0",
     "ibmcloud-appid-js": "^0.4.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
@@ -63,5 +65,15 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/active-code-2021/easyWay-mobileApp.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/active-code-2021/easyWay-mobileApp/issues"
+  }
 }

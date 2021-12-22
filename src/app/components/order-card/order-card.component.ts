@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 
 })
 export class OrderCardComponent implements OnInit {
-  @Input() order: Order;
+  @Input() order;
   orderService: OrdersService;
   constructor(private router: Router) {
 
@@ -21,7 +21,8 @@ export class OrderCardComponent implements OnInit {
   }
 
   displayCustomerDetails() {
-    this.router.navigate(['/execute-order', { order: this.order }])
+
+    this.router.navigate(['/execute-order'], { queryParams: { orderId: this.order.id } })
 
   }
 

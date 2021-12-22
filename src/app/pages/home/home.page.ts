@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+// import * as firebase from '@angular/fire/compat';
+import { GoogleAuthProvider } from "firebase/auth";
 
 
 @Component({
@@ -9,7 +12,21 @@ import { Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
 
-  constructor(private router: Router) { }
+  user = null;
+  constructor(private router: Router, public fireAuth: AngularFireAuth) {
+    this.fireAuth.authState.subscribe((user) => {
+      this.user = user ? user : null;
+
+    });
+  }
+
+  login() {
+    this.fireAuth.signInWithPopup(new GoogleAuthProvider());
+  }
+
+  logout() {
+    this.fireAuth.signOut();
+  }
 
   ngOnInit() {
   }

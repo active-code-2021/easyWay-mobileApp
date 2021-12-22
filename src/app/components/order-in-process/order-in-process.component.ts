@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Customer } from 'src/app/classes/customer';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/classes/order';
 import { OrdersService } from 'src/app/services/orders.service';
 
@@ -9,14 +9,12 @@ import { OrdersService } from 'src/app/services/orders.service';
   styleUrls: ['./order-in-process.component.scss'],
 })
 export class OrderInProcessComponent implements OnInit {
+
   @Input() order: Order;
   orderService: OrdersService;
 
-  constructor() {
+  constructor(private router: Router) { }
 
-  }
+  ngOnInit() { }
 
-  ngOnInit() {
-
-  }
 }
